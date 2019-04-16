@@ -3,7 +3,7 @@
 
 In this project I generated a metric that quantifies the efficient between using a ride sharing taxi service versus the traditional New York City taxi service between Manhattan and Astoria, Queens.
 
-## Data (**Data Prep Extraction.ipynb**)
+## Data ([Data Prep Extraction.ipynb](https://github.com/efandrade/nycRSmetric/blob/master/Data%20Prep%20Extraction.ipynb))
 
 The data collected from http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml was for June 2016 for the yellow cab and green cab service. The relevant data used in this analysis consists of:
 * **weekday**: The day of the week from 0-6 where 0 is Monday and 6 is Sunday
@@ -16,7 +16,7 @@ The data collected from http://www.nyc.gov/html/tlc/html/about/trip_record_data.
 * **trip_duration**: The today duration of the trip (seconds)
 * **trip_cost**: The trip cost excluding tips (dollars)
 
-## Random Forrest Duration Model (**Trip Duration Random Forrest Models.ipynb**)
+## Random Forrest Duration Model ([Trip Duration Random Forrest Models.ipynb](https://github.com/efandrade/nycRSmetric/blob/master/Data%20Prep%20Extraction.ipynb))
 
 I want to predict the time it takes for a cab to go from the pickup point to the dropoff point. Using the data available from NYC, I trained 4 random forest models to predict trip time. I chose to use a random forest model in order to account for non-linear effect in how long it takes cabs to complete a ride (e.g. traffic) given the features in the NYC taxi data. I trained 4 models to predict trip duration:
 
@@ -27,7 +27,7 @@ I want to predict the time it takes for a cab to go from the pickup point to the
 
 ![Predicted Trip Duration to Manhattan](images/Predict_Ast2Man.png)
 
-## Pickup and Dropoff Model
+## Pickup and Dropoff Model ([Analysis.ipynb](https://github.com/efandrade/nycRSmetric/blob/master/Analysis.ipynb))
 
 To model combining riders from the NYC taxi network, I decided to set a predetermined pick location. From this pickup location 1 to 4 riders will board the cab and then the cab will proceed to the closest dropoff destination (measured by the strait distance between the 2 points, not by the road distance). After reaching that destination, the cab will again proceed to the next closest drop off destination.
 
