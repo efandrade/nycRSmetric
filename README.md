@@ -25,10 +25,16 @@ I want to predict the time it takes for a cab to go from the pickup point to the
 * Trip time for rides originating in Manhattan going to Astoria
 * Trip time for rides origination in Manhattan going to Manhattan
 
+![Predicted Trip Duration to Manhattan](images/Predict_Ast2Man.png)
+
 ## Pickup and Dropoff Model
 
 To model combining riders from the NYC taxi network, I decided to set a predetermined pick location. From this pickup location 1 to 4 riders will board the cab and then the cab will proceed to the closest dropoff destination (measured by the strait distance between the 2 points, not by the road distance). After reaching that destination, the cab will again proceed to the next closest drop off destination.
 
 For the same pickup and dropoff points, a NYC taxi would simply start at the pickup point and end at the dropoff point per rider. In order to compare how my ride aggregator model does against the NYC taxi, I generate new pickup and dropoff points where the pickup is one location and the destinations can be at separate locations.
 
+![Trip Model](images/trip_model.png)
+
 I generate new random sets of pickup and dropoff locations. I do this by finding the spatial probability for the pickup points and the dropoff points from the data we have gathered from NYC.
+
+![Manhattan Spacial Probability of Dropoff](images/Manhatan_SpaProb.png)
