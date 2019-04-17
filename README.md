@@ -38,3 +38,11 @@ For the same pickup and dropoff points, a NYC taxi would simply start at the pic
 I generate new random sets of pickup and dropoff locations. I do this by finding the spatial probability for the pickup points and the dropoff points from the data we have gathered from NYC.
 
 ![Manhattan Spacial Probability of Dropoff](images/Manhatan_SpaProb.png)
+
+## Metric
+
+The metric I use is the percentage difference between the normal taxi service and the ride sharing service.
+
+![Metric](images/latex/metric.png)
+
+The efficiency value has a maximum of 1 corresponding to a perfect, 0 trip time for a ride sharing service. While attaining a 1 is impossible under my model, a positive number signifies a lower trip completion time for the ride sharing service over taxi trip completion time. The closer to 1 the metric is, the more efficient (trip duration wise) the ride sharing service is over the taxi service. The minimum value can go to negative infinity corresponding to a longer and longer trip duration for the ride sharing service relative to the taxi trip duration.
